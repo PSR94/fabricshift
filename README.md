@@ -123,6 +123,32 @@ http://localhost:25655/
 8. Plan Migration Waves and review prerequisites.
 9. Generate a migration readiness packet from Reports.
 
+## Screenshots
+
+### Dashboard
+
+![FabricShift dashboard](docs/screenshots/dashboard.png)
+
+### Fabric Mapping
+
+![Fabric target mapping](docs/screenshots/mapping.png)
+
+### Readiness Assessment
+
+![Readiness assessment](docs/screenshots/readiness.png)
+
+### Lineage
+
+![Lineage graph](docs/screenshots/lineage.png)
+
+### Migration Waves
+
+![Migration waves](docs/screenshots/waves.png)
+
+### Reports
+
+![Readiness report](docs/screenshots/reports.png)
+
 ## API Reference
 
 All API routes are prefixed with `/api`.
@@ -147,8 +173,8 @@ All API routes are prefixed with `/api`.
 | `GET` | `/api/readiness/results` | Readiness results |
 | `POST` | `/api/reconciliation/run` | Run reconciliation |
 | `GET` | `/api/reconciliation/results` | Reconciliation results |
-| `GET` | `/api/lineage/graph` | Lineage graph |
-| `GET` | `/api/lineage/asset/:id` | Asset lineage detail |
+| `GET` | `/api/lineage` | Lineage graph |
+| `GET` | `/api/lineage/:id` | Asset lineage detail |
 | `POST` | `/api/lineage/impact` | Impact analysis |
 | `POST` | `/api/migration-waves/plan` | Create wave plan |
 | `GET` | `/api/migration-waves` | Migration waves |

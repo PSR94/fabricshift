@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { useRunFabricMapping, useListMappingResults } from "@workspace/api-client-react";
 import { useQueryClient } from "@tanstack/react-query";
 import { getListMappingResultsQueryKey } from "@workspace/api-client-react";
@@ -111,9 +111,8 @@ export default function Mapping() {
                 </thead>
                 <tbody>
                   {filtered?.map((r) => (
-                    <>
+                    <Fragment key={r.mapping_id}>
                       <tr
-                        key={r.mapping_id}
                         className="border-b border-border/50 hover:bg-muted/30 transition-colors cursor-pointer"
                         onClick={() => setExpanded(expanded === r.mapping_id ? null : r.mapping_id)}
                       >
@@ -165,7 +164,7 @@ export default function Mapping() {
                           </td>
                         </tr>
                       )}
-                    </>
+                    </Fragment>
                   ))}
                 </tbody>
               </table>
