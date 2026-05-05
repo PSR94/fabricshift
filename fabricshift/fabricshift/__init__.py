@@ -1,0 +1,1 @@
+"""FabricShift core library."""
